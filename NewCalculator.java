@@ -5,7 +5,7 @@ private static double secondNumber = 0;
 private static double answer =0;
 private static String operator = "-1";
 
-Scanner scan = new Scanner(System.in);
+static Scanner scan = new Scanner(System.in);
 
 private static void add (double d1, double d2){
   //Insert your Code
@@ -36,21 +36,21 @@ private static void printResult(){
 }
 
 private static void printInstructions(){
-  system.out.println("Step 1: Enter a number:");
-  system.out.println("Step 2: Enter a operator: ");
-  system.out.println("Step 3: Enter a number: ");
-  system.out.println("Repeat step 2 and 3");
-  system.out.println("Terminate softwear by entering anything else at step 2 or step3")
+  System.out.println("Step 1: Enter a number:");
+  System.out.println("Step 2: Enter a operator: ");
+  System.out.println("Step 3: Enter a number: ");
+  System.out.println("Repeat step 2 and 3");
+  System.out.println("Terminate softwear by entering anything else at step 2 or step3");
 }
 
 public static void main(String[] args){
   printInstructions();
 
-  system.out.print("Enter number: ");
+  System.out.print("Enter number: ");
   firstNumber = scan.nextDouble();
-  system.out.print("Enter an operartor:");
-  operartor = scan.next();
-  system.out.print("Enter number: ");
+  System.out.print("Enter an operartor:");
+  operator = scan.next();
+  System.out.print("Enter number: ");
   secondNumber = scan.nextDouble();
 
 

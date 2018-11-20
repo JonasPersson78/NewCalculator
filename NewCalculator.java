@@ -1,8 +1,11 @@
+import java.util.Scanner;
 public class NewCalculator {
 private static double firstNumber = 0;
 private static double secondNumber = 0;
 private static double answer =0;
 private static String operator = "-1";
+
+Scanner scan = new Scanner(System.in);
 
 private static void add (double d1, double d2){
   //Insert your Code
@@ -41,6 +44,15 @@ private static void printInstructions(){
 }
 
 public static void main(String[] args){
+  printInstructions();
+
+  system.out.print("Enter number: ");
+  firstNumber = scan.nextDouble();
+  system.out.print("Enter an operartor:");
+  operartor = scan.next();
+  system.out.print("Enter number: ");
+  secondNumber = scan.nextDouble();
+
 
 
  }

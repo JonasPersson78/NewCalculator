@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
+
 public class NewCalculator {
 private static double firstNumber = 0;
 private static double secondNumber = 0;
@@ -23,12 +25,29 @@ private static void div (double d1, double d2){
   //Insert your code
 }
 
-private static void enterDouble(){
+private static double enterDouble(){
   //Insert your code
+  double input = 0;
+  boolean error = true;
+  System.out.print("Enter number: ");
+  while (error){
+    try{
+      input = scan.nextDouble();
+      error = false;
+    }
+    catch(InputMismatchException e){
+      System.out.println("You have not entered a number: ");
+      scan.next();//clear scanner
+    }
+  }
+return input;
 }
-
 private static void enterOperator(){
-  //Insert your code
+  while (!(operator.equals("+") || operator.equals("-") ||
+            operator.equals("*") || operator.equals("/"))){
+            System.out.println("Enter an Operator: ");
+            operator = scan.next();
+            }
 }
 
 private static void printResult(){
@@ -46,13 +65,11 @@ private static void printInstructions(){
 public static void main(String[] args){
   printInstructions();
 
-  System.out.print("Enter number: ");
-  firstNumber = scan.nextDouble();
+
+  firstNumber = enterDouble();
   System.out.print("Enter an operartor:");
   operator = scan.next();
-  System.out.print("Enter number: ");
-  secondNumber = scan.nextDouble();
-
+  secondNumber = enterDouble();
 
 
  }

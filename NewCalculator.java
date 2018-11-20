@@ -9,20 +9,20 @@ private static String operator = "-1";
 
 static Scanner scan = new Scanner(System.in);
 
-private static void add (double d1, double d2){
-  //Insert your Code
+private static void add(){
+  answer = firstNumber + secondNumber;
 }
 
-private static void sub (double d1, double d2){
-  //Insert your code
+private static void sub(){
+  answer = firstNumber - secondNumber;
 }
 
-private static void mult (double d1, double d2){
-  //Insert yor code
+private static void mult(){
+  answer = firstNumber * secondNumber;
 }
 
-private static void div (double d1, double d2){
-  //Insert your code
+private static void div(){
+  answer = firstNumber / secondNumber;
 }
 
 private static double enterDouble(){
@@ -51,26 +51,41 @@ private static void enterOperator(){
 }
 
 private static void printResult(){
-  //
+  System.out.println ("The answer is: "+ answer);
 }
 
 private static void printInstructions(){
   System.out.println("Step 1: Enter a number:");
   System.out.println("Step 2: Enter a operator: ");
   System.out.println("Step 3: Enter a number: ");
-  System.out.println("Repeat step 2 and 3");
-  System.out.println("Terminate softwear by entering anything else at step 2 or step3");
+
 }
 
 public static void main(String[] args){
   printInstructions();
+  String quit = "n";
+  while(!quit.equals("y")){
+    firstNumber = enterDouble();
+    enterOperator();
+    secondNumber = enterDouble();
+    if (!(operator.equals("/") && secondNumber == 0)){
+      if ( operator.equals("+") ) {
+        add();
+      }else if (operator.equals("-") ){
+        sub();
+      }else if (operator.equals("*") ){
+        mult();
+      }else if (operator.equals("/") ){
+        div();
+    }
+    printResult();
+  } else {
+    System.out.println("You are dividing by Zero! Try agin!: ");
+  }
+    System.out.println("Qiut? 'Y' for Yes");
+    quit = scan.next();
+    operator = "-1";
 
-
-  firstNumber = enterDouble();
-  System.out.print("Enter an operartor:");
-  operator = scan.next();
-  secondNumber = enterDouble();
-
-
+  }
  }
 }

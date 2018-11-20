@@ -33,10 +33,15 @@ private static void printResult(){
 }
 
 private static void printInstructions(){
-  //
+  system.out.println("Step 1: Enter a number:");
+  system.out.println("Step 2: Enter a operator: ");
+  system.out.println("Step 3: Enter a number: ");
+  system.out.println("Repeat step 2 and 3");
+  system.out.println("Terminate softwear by entering anything else at step 2 or step3")
 }
 
 public static void main(String[] args){
+
 
  }
 }
